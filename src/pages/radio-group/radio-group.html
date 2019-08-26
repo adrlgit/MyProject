@@ -1,0 +1,46 @@
+<!--
+  Generated template for the RadioGroupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>radio-group</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="radiogroup">
+    <ion-list-header>
+      Radio
+    </ion-list-header>
+    <ion-item>
+      <ion-label>consulta</ion-label>
+      <ion-radio value="consulta"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>medico</ion-label>
+      <ion-radio value="medico"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item *ngIf="radiogroup === 'consulta'">
+      <h2>item consulta</h2>
+      <h2>item consulta</h2>
+      <h2>item consulta</h2>
+      <h2>item consulta</h2>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item *ngIf="radiogroup === 'medico'">
+      medico
+    </ion-item>
+  </ion-list>
+
+  <ion-row>
+    <ion-col >
+      <button ion-button (clcik)="irRadio()">Radio</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

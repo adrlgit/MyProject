@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>radio-sabado</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row radio-group [(ngModel)]="radiogroup">
+    <ion-col>
+      <ion-item>
+        <ion-label>Sim</ion-label>
+        <ion-radio checked="" value="sim"></ion-radio>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio checked="" value="nao"></ion-radio>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <button ion-button *ngIf="'radiogroup === '">SIM</button>
+  <button ion-button>NAO</button>
+</ion-content>

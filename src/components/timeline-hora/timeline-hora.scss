@@ -1,0 +1,23 @@
+timeline-hora {
+  .timeline {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 3px #ccc;
+    color: #21b399;
+    // margin: 3px auto;
+    z-index: 1000;
+    text-align: center;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 3px;
+    background: #ccc;
+    top: 70px;
+    margin-left: 2px;
+  }
+}

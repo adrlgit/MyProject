@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button icon-left>
+    <ion-icon name="cloud-upload"></ion-icon>
+    salvar
+  </button>
+  <ion-item>
+    <ion-label fixed text-wrap>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero dicta qui corrupti velit
+      vitae iste quos aut at recusandae eveniet nesciunt, id laborum sequi aperiam eaque unde atque ea sunt.</ion-label>
+    <ion-input type=""></ion-input>
+  </ion-item>
+  <ion-row>
+    <ion-col>
+      <button (click)="irJedi()" color="danger" ion-button>
+        JED...
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-avatar item-start>
+          <h6>Consultar Entradas</h6>
+        </ion-avatar>
+        <ion-avatar item-end>
+          <h6 text-uppercase>mudar filtro</h6>
+        </ion-avatar>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="" alt="denteSelecionado" />
+      </ion-avatar>
+      <h2>Dente 65 - Coroa - Mesial - Permanentes</h2>
+      <p>K021 - Cáries da dentina</p>
+      <ion-avatar item-end>
+        <button (click)="data()" color="light" ion-button text-uppercase>
+          Planejar tratamento
+        </button>
+      </ion-avatar>
+      <ion-avatar padding item-end>
+        <ion-icon name="close"></ion-icon>
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+
+  <ion-item *ngFor="let item of [1, 2, 3, 4, 5, 6]">
+    <ion-avatar item-start>
+      <img src="img/marty-avatar.png" />
+    </ion-avatar>
+    <h2>Marty McFly</h2>
+    <p>November 5, 1955</p>
+
+    <ion-avatar item-end>
+      <h2>Marty McFly</h2>
+      <p>November 5, 1955</p>
+    </ion-avatar>
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+      <ion-buttons end>
+        <button ion-button>Adicionar</button>
+        <button ion-button>Adicionar</button>
+      </ion-buttons>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="refrigerante" col-4>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of items"> {{ item }} -- Auto. </ion-item>
+      </ion-list>
+      <!-- <ion-list>
+        <ion-item
+          *ngFor="
+            let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+          "
+        >
+          <ion-label color="danger">Inline Label</ion-label>
+          <ion-input color="danger" placeholder="Text Input"></ion-input>
+        </ion-item>
+      </ion-list> -->
+      <input type="text" [value]="user.name" />
+      <button ion-button (click)="goNew()">nova page timeline</button>
+      <button ion-button (click)="goOld()">Velha</button>
+      <button ion-button (click)="goFab()" uppercase>tabs</button>
+      <button ion-button (click)="goPopover()" uppercase>popover</button>
+      <button ion-button (click)="goRadio()" uppercase>radio</button>
+    </ion-col>
+    <ion-col col-8>
+      Teste
+    </ion-col>
+  </ion-row>
+</ion-content>
